@@ -77,7 +77,6 @@ html, body {
     height: 100%;
     background-color: transparent;
     outline: none;
-    /* border: 1px solid #dc8501; */
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
@@ -86,9 +85,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: #dc8501;
-    border-radius: 20px;
-    color: #fffafa; */
     transition: all 0.2s;
 }
 
