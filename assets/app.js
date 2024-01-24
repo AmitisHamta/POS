@@ -15,6 +15,7 @@ const resultMessage = $.getElementById('message');
 const supabase = createClient
 ('https://wbkeahghzxpcrxdbmdge.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6India2VhaGdoenhwY3J4ZGJtZGdlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU5OTU3MDQsImV4cCI6MjAyMTU3MTcwNH0.g0VDd1nt_JwDOKjItT6pWdtLjLqm9zs5k1toXLCHo5I')
 
+const phoneRegex = /^(?:(?:\+|00)98|0)?9\d{9}$/;
 
 const goToForm = () => {
     $.documentElement.scrollTo({
@@ -42,7 +43,11 @@ const checkInputs = () => {
     if (isDataEmpty) {
         showErrorMsg('لطفا اطلاعات رو تکمیل کنید');
     }else {
-        setInfo();
+        if (!phoneRegex.test(inputs[2].value)) {
+            showErrorMsg('شماره موبایل وارد شده صحیح نمیباشد');
+        }else {
+            setInfo();
+        }
     }
 }
 
@@ -77,7 +82,7 @@ async function setInfo () {
     })
 
     if (error) {
-        showErrorMsg('لطفا دئباره تلاش کنید');
+        showErrorMsg('لطفا دوباره تلاش کنید');
     }else {
         showSuccessMsg('اطلاعات شما با موفقیت ثبت شد');
         resetInputs();
