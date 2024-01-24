@@ -1,0 +1,670 @@
+html, body {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue) var(--theme);
+    overflow-x: hidden;
+    background-color: #e8e8e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: iransans;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(#106ea5);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(#fffafa);
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(fonts/woff/IRANSansX-Regular.woff) format(woff);
+  font-display: swap;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#header-logo {
+    width: 16%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#header-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.navbtn {
+    width: 16%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #dc8501;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dc8501;
+    border-radius: 20px;
+    color: #fffafa;
+    transition: all 0.2s;
+}
+
+.underline {
+    width: 100%;
+    background-color: #dc8501;
+    position: absolute;
+    bottom: 0;
+    border: 1.5px solid #dc8501;
+    border-radius: 20px;
+}
+
+.navbtn:hover {
+    background-color: #e8e8e8;
+    color: #333;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+    padding: 100px;
+}
+
+#product-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    direction: rtl;
+    justify-content: center;
+    gap: 30px;
+    background-color: #fffafa;
+    border-radius: 10px;
+    border: 1px solid #dc8501;
+    padding: 40px;
+}
+
+.product-img {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 40%;
+}
+
+.info h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info h3 i {
+    color: #106ea5;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+}
+
+.info-list p {
+    font-size: 0.9rem;
+}
+
+.bi-check-circle-fill {
+    color: #dc8501;
+}
+
+#form-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fffafa;
+    border-radius: 20px;
+    direction: rtl;
+    border: 1px solid #dc8501;
+    padding: 50px 100px;
+}
+
+#form-logo {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-logo img {
+    width: 100%;
+    height: auto;
+}
+
+#form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+.data-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.inputs-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 55px;
+}
+
+.inputs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column-reverse;
+    width: 29%;
+}
+
+.input, .ex-input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #dc8501;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: row-reverse;
+}
+
+label i {
+    color: tomato;
+    font-size: 0.6rem;
+}
+
+#form-btn {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+#submit-btn {
+    outline: none;
+    border: none;
+    width: 29%;
+    background-color: #dc8501;
+    height: 50px;
+    border-radius: 10px;
+    color: #fffafa;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#submit-btn:hover {
+    box-shadow: 0 0 0 0.2rem #dc8501a3;
+}
+
+#form-btn small{
+    font-size: 1rem;
+    display: none;
+}
+
+.error {
+    color: tomato;
+    display: inline !important;
+}
+
+.success {
+    color: green;
+    display: inline !important;
+}
+
+#footer {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #dc8501;
+    direction: rtl;
+    color: #fffafa;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+    #navbar {
+        width: 100%;
+    }
+
+    .navbtn {
+        width: 25%;
+        font-size: 1rem;
+    }
+
+    #header-logo {
+        width: 30%;
+    }
+
+    #content {
+        padding: 50px;
+        gap: 200px;
+    }
+
+    #product-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .product {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    #form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #form-logo {
+        width: 40%;
+    }
+
+    #form-inputs {
+        gap: 70px;
+    }
+
+    .inputs-container {
+        gap: 30px;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    #submit-btn {
+        width: 100%;
+    }
+
+    #footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    #navbar {
+        width: 100%;
+    }
+
+    .navbtn {
+        width: 25%;
+        font-size: 1.3rem;
+    }
+
+    #header-logo {
+        width: 25%;
+    }
+
+    #content {
+        padding: 50px;
+        gap: 200px;
+    }
+
+    #product-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .product {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    #form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #form-logo {
+        width: 40%;
+    }
+
+    .inputs-container {
+        gap: 30px;
+    }
+
+    #form-inputs {
+        gap: 70px;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    #submit-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #navbar {
+        width: 100%;
+    }
+
+    .navbtn {
+        width: 20%;
+        font-size: 1.5rem;
+    }
+
+    #header-logo {
+        width: 20%;
+    }
+
+    #content {
+        padding: 50px;
+        gap: 200px;
+    }
+
+    #product-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .product {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .info {
+        width: 40%;
+    }
+
+    #form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #form-logo {
+        width: 40%;
+    }
+
+    .inputs-container {
+        gap: 30px;
+    }
+
+    #form-inputs {
+        gap: 70px;
+    }
+
+    .inputs {
+        width: 47%;
+    }
+
+    #submit-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1279px) {
+    #navbar {
+        width: 100%;
+    }
+
+    .navbtn {
+        width: 15%;
+        font-size: 1.5rem;
+    }
+
+    #header-logo {
+        width: 20%;
+    }
+
+    #content {
+        padding: 50px;
+        gap: 200px;
+    }
+
+    #product-container {
+        gap: 30px;
+    }
+
+    .product {
+        padding: 20px;
+        width: 50%;
+    }
+
+    .info {
+        width: 45%;
+    }
+
+    .info h3 {
+        font-size: 1.1rem;
+    }
+
+    #form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #form-logo {
+        width: 25%;
+    }
+
+    .inputs-container {
+        gap: 30px;
+    }
+
+    #form-inputs {
+        gap: 70px;
+    }
+
+    .inputs {
+        width: 47%;
+    }
+
+    #submit-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1600px) {
+    #navbar {
+        width: 100%;
+    }
+
+    .navbtn {
+        width: 10%;
+        font-size: 1.5rem;
+    }
+
+    #header-logo {
+        width: 15%;
+    }
+
+    #content {
+        padding: 50px;
+        gap: 200px;
+    }
+
+    #product-container {
+        gap: 30px;
+    }
+
+    .product {
+        width: 50%;
+    }
+
+    .info {
+        width: 45%;
+    }
+
+    .info h3 {
+        font-size: 1.5rem;
+    }
+
+    #form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #form-logo {
+        width: 25%;
+    }
+
+    .inputs-container {
+        gap: 30px;
+    }
+
+    #form-inputs {
+        gap: 70px;
+    }
+
+    .inputs {
+        width: 31%;
+    }
+
+    #submit-btn {
+        width: 31%;
+    }
+}
