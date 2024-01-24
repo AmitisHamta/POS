@@ -59,7 +59,6 @@ async function setInfo () {
         taxCodeValue = taxCode.value
     }
     
-    
     const { data, error } = await supabase
     .from('posUsers')
     .insert({
