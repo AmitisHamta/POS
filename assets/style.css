@@ -34,6 +34,11 @@ html, body {
   font-display: swap;
 }
 
+a {
+    color: #333;
+    text-decoration: none;
+}
+
 #container {
     width: 100%;
     height: 100%;
